@@ -3,9 +3,9 @@ Repo containing automatically-uploaded LeetCode solutions of mine to track my pr
 
 # How it works
 There are 3 parts to this project
-- [ ] Private Chrome extension that captures the LeetCode solution and other relevant information and passes it to AWS Lambda for processing, written in JS
-- [ ] AWS Lambda function which receives input from the Chrome extension and saves the solution into a file with the correct file type, and generates a `README.md` file containing more information on the LeetCode problem. These 2 files get dumped into s3, and their paths grouped based on their difficulty
-- [ ] Github Actions CRON job that runs everytime S3 gets updated.
+- [x] Private Chrome extension that captures the LeetCode solution and other relevant information and passes it to AWS Lambda for processing, written in JS
+- [x] AWS Lambda function which receives input from the Chrome extension and saves the solution into a file with the correct file type, and generates a `README.md` file containing more information on the LeetCode problem. These 2 files get dumped into s3, and their paths grouped based on their difficulty
+- [x] Github Actions CRON job that runs everytime S3 gets updated.
 
 ## Chrome Extension
 Written in TypeScript. A script with a bunch of `document.querySelector`, and checks when a leetcode solution is Accepted, and if it is do a POST request to the lambda function URL
