@@ -1,0 +1,1 @@
+# Solutions folder separated by difficulty level
