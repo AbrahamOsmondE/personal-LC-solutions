@@ -1,0 +1,30 @@
+name: Upload Solution
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: keithweaver/aws-s3-github-action@v1.0.0
+        name: cp folder
+        with:
+          command: cp
+          source: bogglebot
+          destination: ./solutions/
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ap-southeast-1
+          flags: --recursive
+      - name: Commit changes
+        env:
+            TITLE: ${{ github.event.title }}
+        run: |
+         git config --local user.email "abraham.osmond@gmail.com"
+         git config --local user.name "abrahamosmonde"
+         git add .
+         git diff-index --quiet HEAD || git commit -m "Upload Solution for $TITLE" -a
+         git push origin main
