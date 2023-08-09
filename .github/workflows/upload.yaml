@@ -21,7 +21,7 @@ jobs:
           flags: --recursive
       - name: Commit changes
         env:
-            TITLE: ${{ github.event.title }}
+            TITLE: ${{ github.event.client_payload.title }}
         run: |
          git config --local user.email "abraham.osmond@gmail.com"
          git config --local user.name "abrahamosmonde"
