@@ -1,4 +1,4 @@
-## [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
+## [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/description/)
 ## Medium
 <p>We are given an array <code>asteroids</code> of integers representing asteroids in a row.</p>
 
