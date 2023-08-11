@@ -1,21 +1,11 @@
 class Solution:
-    def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-        stack = []
-        for i in asteroids:
-            if stack == []:
-                stack.append(i)
-            else:
-                if stack[-1] > 0 and i < 0:
-                    while stack and stack[-1] > 0 and i < 0:
-                        if abs(i) > abs(stack[-1]):
-                            stack.pop()
-                        elif abs(stack[-1]) > abs(i):
-                            i = 0
-                        else:
-                            stack.pop()
-                            i = 0
-                    if i !=0:
-                            stack.append(i)
-                else:
-                    stack.append(i)
-        return stack
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs:
+            return ""
+        s1 = min(strs)
+        s2 = max(strs)
+        for i,char in enumerate(s1):
+            if s2[i] != char:
+                return s1[:i]
+        return s1
+        
