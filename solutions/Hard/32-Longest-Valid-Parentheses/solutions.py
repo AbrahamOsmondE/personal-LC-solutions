@@ -10,8 +10,8 @@ class Solution:
                 if len(bracketStack) == 0:
                     bracketStack.append(index)
                 else:
-                    maxLength = maxLength if maxLength > abs(index - 
-bracketStack[-1]) else index -bracketStack[-1]
+                    maxLength = maxLength if maxLength > abs(index - bracketStack
+[-1]) else index -bracketStack[-1]
         return maxLength
                             
                         

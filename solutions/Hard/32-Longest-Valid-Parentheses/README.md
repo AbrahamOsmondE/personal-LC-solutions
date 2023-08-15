@@ -1,6 +1,6 @@
 ## [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/description/)
 ## Hard
-<p>Given a string containing just the characters <code>'('</code> and <code>')'</code>, return <em>the length of the longest valid (well-formed) parentheses </em><span data-keyword="substring-nonempty" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div id="headlessui-popover-button-:rtm:" aria-expanded="false" data-headlessui-state=""><em>substring</em></div></div></div></span>.</p>
+<p>Given a string containing just the characters <code>'('</code> and <code>')'</code>, return <em>the length of the longest valid (well-formed) parentheses </em><span data-keyword="substring-nonempty" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div id="headlessui-popover-button-:rs:" aria-expanded="false" data-headlessui-state=""><em>substring</em></div></div></div></span>.</p>
 
 
 <p><strong class="example">Example 1:</strong></p>
